@@ -1,0 +1,64 @@
+<div class="page-header p-5 overlay-wraper header-1" data-parallax="true">
+  <div class="overlay-main bg-black opacity-07"></div>
+  <div class="container p-5 p-lg-0 pt-lg-5">
+    <div class="motto text-center">
+      <h2 class="p-5 m-5 fw-bolder text-white">GALLERY</h2>
+    </div>
+  </div>
+</div>
+<div class="col-md-12 p-0">
+  <div class="row m-0">
+    <div class="col-md-12 p-0">
+      <div class="row m-0 filterImage">
+        <div class="col-md-2 p-0">
+          <div class="photo-gallery-1 p-3">
+            <span>PHOTO GALLERY</span>
+          </div>
+        </div>
+        <div class="col-md-10 p-0">
+          <div class="filter-btn">
+            <button
+              type="button"
+              class="btn"
+              [class.active]="filterBy == 'all'"
+              (click)="filterBy = 'all'"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="btn"
+              [class.active]="filterBy == 'boats'"
+              (click)="filterBy = 'boats'"
+            >
+              Projects
+            </button>
+            <button
+              type="button"
+              class="btn"
+              [class.active]="filterBy == 'camping'"
+              (click)="filterBy = 'camping'"
+            >
+              Construction site
+            </button>
+            <button
+              type="button"
+              class="btn"
+              [class.active]="filterBy == 'library'"
+              (click)="filterBy = 'library'"
+            >
+              Services
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="thumbnailsList">
+      <li *ngFor="let image of visibleImages | imageFilter: filterBy">
+        <a [routerLink]="['/image', image.id]">
+          <img src="{{ image.url }}" class="tn" width="200" height="160" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

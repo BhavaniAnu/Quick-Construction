@@ -1,0 +1,209 @@
+b {
+  font-weight: 900;
+  font-size: 50px;
+  color: #ffc107;
+}
+.text-left {
+  text-align: left;
+}
+.about {
+  margin-top: 1.25rem;
+}
+
+.about-com-pic {
+  position: relative;
+  z-index: 1;
+}
+.about-com-pic:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  left: -10px;
+  background-color: #ffc107;
+  z-index: -1;
+}
+
+.about-com-pic img {
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
+}
+
+.carousel-item img {
+  height: 255px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.carousel-indicators button {
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 50% !important;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.team {
+  .card {
+    margin: 10px 0px;
+    border-bottom: 3px solid #ffc107;
+    img {
+      width: 100%;
+      height: 250px;
+    }
+    .card-body {
+      height: 100px;
+    }
+  }
+}
+
+.service {
+  .card {
+    min-height: 18.75rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: table;
+  }
+  .card-body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.underline {
+  position: relative;
+}
+.underline::before {
+  content: "";
+  background-color: #ffc107;
+  width: 55px;
+  height: 3px;
+  position: absolute;
+  bottom: -3px;
+}
+/*--------------------------------------------------------------
+# Our Team
+--------------------------------------------------------------*/
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+.member-info {
+  h4 {
+    &:hover {
+      color: #ffbc13 !important;
+    }
+  }
+}
+.team .member .social a {
+  transition: color 0.3s;
+  color: #111;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+.team .member .social a i {
+  line-height: 0;
+}
+.team .member .social a:hover {
+  color: #1bbd36;
+}
+.team .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+.team .member .member-info {
+  padding: 25px 15px;
+}
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #111;
+}
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #b4aca8;
+}
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #847872;
+}
+.team .member:hover .social {
+  opacity: 1;
+}
+
+//-------------------media-queries--------------//
+@media (max-width: 575.98px) {
+  .service {
+    margin-top: 10px;
+  }
+  .about-us {
+    position: relative;
+    top: 6.25rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .service {
+    margin-top: 10px;
+  }
+  .nav-head {
+    left: 11px;
+  }
+  .home-properties {
+    padding: 5px 0px !important;
+  }
+}
+@media (min-width: 360px) and (max-width: 640px) {
+  .service {
+    margin-top: 40px;
+  }
+  .us-1 {
+    margin-top: 20px;
+    padding: 0 !important;
+  }
+  .about-com-pic {
+    img {
+      height: 405px;
+    }
+  }
+  .section-head {
+    margin-bottom: 0 !important;
+  }
+  .section-head-1 {
+    margin-top: 40px !important;
+  }
+  .section-full {
+    margin-top: 100px;
+  }
+  .about-us {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .about-us {
+    margin-top: 80px;
+  }
+}
